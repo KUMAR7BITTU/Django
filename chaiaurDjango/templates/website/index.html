@@ -1,0 +1,27 @@
+{% comment %} <!-- Whenever you want to use static files then you have to tell the template engine that you have to load that static files -->
+{% load static %} 
+<!--This is also our templating engine -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Django </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- {% static 'style.css' %} It means ki koi static asset (style.css in this case) load kardo .-->
+    
+</head>
+<body>
+    <h1>Chai aur Django Home page</h1>
+</body>
+</html> {% endcomment %}
+
+{% extends "layout.html" %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1>Chai aur code | Home Page</h1>
+{% endblock %}
