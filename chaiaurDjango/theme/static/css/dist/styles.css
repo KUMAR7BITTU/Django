@@ -8,10 +8,13 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-orange-400: oklch(75% 0.183 55.934);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
+    --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-gray-50: oklch(98.5% 0.002 247.839);
+    --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
@@ -213,6 +216,9 @@
   .h-screen {
     height: 100vh;
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .items-center {
     align-items: center;
   }
@@ -222,14 +228,23 @@
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
-  .bg-orange-500 {
-    background-color: var(--color-orange-500);
+  .bg-green-400 {
+    background-color: var(--color-green-400);
   }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
+  .bg-orange-400 {
+    background-color: var(--color-orange-400);
+  }
+  .bg-pink-500 {
+    background-color: var(--color-pink-500);
+  }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
   }
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
+  }
+  .text-center {
+    text-align: center;
   }
   .font-serif {
     font-family: var(--font-serif);
