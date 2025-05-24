@@ -20,6 +20,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,7 +31,7 @@ urlpatterns = [
     path('chai/',include('chai.urls')),
 
     path("__reload__/",include("django_browser_reload.urls")),
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 """ urls ko batana padega ki konsa view kisme jaayga."""
 """Here we do routing of all the files. routing means in which url you will go and what will happen after going to that url will be discussed in seperate file. That file is views.py and it defines all the views. views means controller where all functionality and bussiness logic is written ."""
